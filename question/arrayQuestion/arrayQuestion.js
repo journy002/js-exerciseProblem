@@ -1,18 +1,28 @@
-// 첫 글자를 대문자로 변경하기
-// ucFirst('john') == 'John';을 충족시켜보기
+// 아래 코드를 실행하면 어떤 결과가 나올까요?
+let fruits = ["apple", "pear", "orange"];
+let shoppingCart = fruits;
+shoppingCart.push("banana");
 
-// 스팸 문자열 걸러내기
-// 대소문자 상관없이 str에 'viagra', 'XXX' 라는 문자열이 있으면 true를 반환해주는 함수를 만들어 보기
-// 해당 문자열이 없으면 false를 반환하면 됩니다.
+console.log(shoppingCart, "shoppingCart");
 
-// 문자열 줄이기
-// str의 길이를 확인하고, 최대 길이 maxlength를 초과하는 경우 str 끝을 생략 부호 ('...')로 대체 하는 함수 만들어 보기
-// 예시:
-// turncate("What I'd like to tell on this topic is:", 20) = "What I'd like to te…"
-// turncate("Hi everyone!", 20) = "Hi everyone!"
+// 배열과 관련된 다섯 가지 연산을 해봅시다.
 
-// 숫자만 추출하기
-// 달러 표시가 먼저 나오고 그 뒤에 숫자가 나오는 문자열 '$120'가 있다고 가정해 봅시다.
-// 위와 같이 문자열에서 숫자만 뽑아내는 함수를 작성해 봅시다.
-// 예시:
-// alert( extractCurrencyValue('$120') === 120 ); // true
+// 요소 “Jazz”, "Blues"가 있는 styles 배열을 생성합니다.
+// "Rock-n-Roll"을 배열 끝에 추가합니다.
+// 배열 정 중앙에 있는 요소를 "Classics"로 바꿉니다. 가운데 요소를 찾는 코드는 요소가 홀수 개인 배열에서도 잘 작동해야 합니다.
+// 배열의 첫 번째 요소를 꺼내서 출력합니다.
+// "Rap"과 "Reggae"를 배열의 앞에 추가합니다.
+// 단계를 하나씩 거칠 때마다 배열 모습은 아래와 같이 변해야 합니다.
+
+// Jazz, Blues
+// Jazz, Blues, Rock-n-Roll
+// Jazz, Classics, Rock-n-Roll
+// Classics, Rock-n-Roll
+// Rap, Reggae, Classics, Rock-n-Roll
+
+let styles = ["Jazz", "Blues"];
+styles.push("Rock-n-roll");
+styles[Math.floor(styles.length - 1) / 2] = "Classics";
+styles.shift();
+styles.unshift("Rap", "Reggae");
+console.log(styles, "styles");
