@@ -26,3 +26,26 @@ styles[Math.floor(styles.length - 1) / 2] = "Classics";
 styles.shift();
 styles.unshift("Rap", "Reggae");
 console.log(styles, "styles");
+
+// 입력한 숫자의 합 구하기
+
+// 아래 조건을 만족하는 함수 sumInput()을 작성해 봅시다.
+
+// prompt 창을 띄워 사용자에게 숫자를 입력해 달라고 요청한 후, 입력받은 값들을 배열에 저장합니다.
+// 숫자가 아닌 값, 혹은 빈 문자열을 입력하거나 ‘Cancel’ 버튼을 누르면 질문을 멈춥니다.
+// 배열 요소의 합을 계산하고 리턴합니다.
+// 주의: 숫자 0은 유효한 숫자이므로, 사용자가 0을 입력하더라도 질문이 멈추지 말아야 합니다.
+
+let a = parseInt(prompt());
+let b = parseInt(prompt());
+let c = [];
+
+function sumInput(a, b) {
+  c.push(a, b);
+  console.log(c, "c");
+  console.log(typeof c[0]);
+  console.log(typeof c[1]);
+  console.log(`a + b = ${c[0] + c[1]}`);
+}
+
+sumInput(a, b);
