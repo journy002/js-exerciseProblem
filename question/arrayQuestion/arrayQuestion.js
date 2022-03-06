@@ -43,7 +43,8 @@ function sumInput() {
     let value = prompt("숫자를 적어주세요", 0);
     if (value === "" || value === null || !isFinite(value)) break;
 
-    numbers.push(+value); // prompt에서 들어오는 값은 string타입 이다. 그렇기 때문에 value 앞에 +를 붙여주어 number 타입으로 바꿔줘야 숫자를 합칠 수 있다.
+    // prompt에서 들어오는 값은 string타입 이다. 그렇기 때문에 value 앞에 +를 붙여주어 number 타입으로 바꿔줘야 숫자를 합칠 수 있다.
+    numbers.push(+value);
   }
 
   let sum = 0;
