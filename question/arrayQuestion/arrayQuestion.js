@@ -36,16 +36,22 @@ console.log(styles, "styles");
 // 배열 요소의 합을 계산하고 리턴합니다.
 // 주의: 숫자 0은 유효한 숫자이므로, 사용자가 0을 입력하더라도 질문이 멈추지 말아야 합니다.
 
-let a = parseInt(prompt());
-let b = parseInt(prompt());
-let c = [];
+function sumInput() {
+  let numbers = [];
 
-function sumInput(a, b) {
-  c.push(a, b);
-  console.log(c, "c");
-  console.log(typeof c[0]);
-  console.log(typeof c[1]);
-  console.log(`a + b = ${c[0] + c[1]}`);
+  while (true) {
+    let value = prompt("숫자를 적어주세요", 0);
+    if (value === "" || value === null || !isFinite(value)) break;
+
+    numbers.push(+value); // prompt에서 들어오는 값은 string타입 이다. 그렇기 때문에 value 앞에 +를 붙여주어 number 타입으로 바꿔줘야 숫자를 합칠 수 있다.
+  }
+
+  let sum = 0;
+  console.log(numbers, "numbers");
+  for (let number of numbers) {
+    sum += number;
+  }
+  return console.log(sum);
 }
 
-sumInput(a, b);
+console.log(sumInput());
